@@ -14,7 +14,7 @@ async function main() {
   console.log("Successfully connected to mongodb");
 
   const responses = await Response.find(
-    { deployId: "936328df-b0ae-400f-be79-dcb33460a1e8" },
+    { deployId: process.env.DEPLOY_ID },
     "-_id"
   ).lean();
 
